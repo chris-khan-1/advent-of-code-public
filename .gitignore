@@ -1,6 +1,6 @@
-input.txt
-instructions.txt
-result.txt
+input.*
+instructions.*
+result.*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
