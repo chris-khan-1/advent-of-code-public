@@ -1,10 +1,10 @@
 def parse_input(input: list[str]) -> tuple[list, list]:
     left = []
     right = []
-    for i, value in enumerate(input):
-        left_value, right_value = value.split()
-        left.append(int(left_value))
-        right.append(int(right_value))
+    for value in input:
+        left_value, right_value = map(int, value.split())
+        left.append(left_value)
+        right.append(right_value)
     return sorted(left), sorted(right)
 
 
