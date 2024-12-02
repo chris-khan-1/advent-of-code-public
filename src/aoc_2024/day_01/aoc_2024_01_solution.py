@@ -8,22 +8,12 @@ def parse_input(input: list[str]) -> tuple[list, list]:
     return sorted(left), sorted(right)
 
 
-def get_difference(a: int, b: int) -> int:
-    return abs(a - b)
-
-
 def get_total_difference(left: list, right: list) -> int:
-    total = 0
-    for i in range(len(left)):
-        total += get_difference(a=left[i], b=right[i])
-    return total
+    return sum(abs(x - y) for x, y in zip(left, right))
 
 
 def get_total_similarity(left: list, right: list) -> int:
-    total = 0
-    for i in set(left):
-        total += i * left.count(i) * right.count(i)
-    return total
+    return sum(x * right.count(x) for x in left)
 
 
 if __name__ == "__main__":

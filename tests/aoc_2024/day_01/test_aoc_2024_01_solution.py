@@ -1,7 +1,4 @@
-import pytest
-
 from src.aoc_2024.day_01.aoc_2024_01_solution import (
-    get_difference,
     get_total_difference,
     get_total_similarity,
     parse_input,
@@ -21,18 +18,6 @@ def test_parse_input():
 
     assert actual_one == [1, 2, 3, 3, 3, 4]
     assert actual_two == [3, 3, 3, 4, 5, 9]
-
-
-@pytest.mark.parametrize(
-    argnames=["a", "b", "expected"],
-    argvalues=[
-        pytest.param(3, 7, 4, id="right bigger"),
-        pytest.param(9, 3, 6, id="left bigger"),
-    ],
-)
-def test_get_difference(a, b, expected):
-    actual = get_difference(a=a, b=b)
-    assert actual == expected
 
 
 def test_get_total_difference():
