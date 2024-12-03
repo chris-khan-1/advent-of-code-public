@@ -7,7 +7,7 @@ def check_safety(data: list) -> bool:
     if data == sorted(data) or data == sorted(data, reverse=True):
         for i in range(len(data) - 1):
             diff = abs(data[i] - data[i + 1])
-            if 1 > diff or diff > 3:
+            if diff < 1 or diff > 3:
                 return False
         return True
     return False

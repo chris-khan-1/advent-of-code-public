@@ -1,0 +1,7 @@
+#!/bin/bash
+
+python ./file_copier.py
+
+git add .
+
+git commit -m "copying files"
