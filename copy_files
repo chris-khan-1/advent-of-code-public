@@ -2,6 +2,8 @@
 
 python ./file_copier.py
 
+pytest
+
 git add .
 
 git commit -m "copying files"
