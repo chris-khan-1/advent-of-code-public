@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 
 python ./file_copier.py
 
