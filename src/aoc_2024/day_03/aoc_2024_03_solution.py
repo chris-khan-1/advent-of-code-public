@@ -6,8 +6,8 @@ def get_valid_instructions(input: str) -> list:
 
 
 def do_instruction(input: str) -> int:
-    a, b = input[4:-1].split(",")
-    return int(a) * int(b)
+    a, b = map(int, input[4:-1].split(","))
+    return a * b
 
 
 def get_conditional_valid_instructions(input: str) -> list:

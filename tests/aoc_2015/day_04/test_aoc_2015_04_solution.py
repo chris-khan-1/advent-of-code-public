@@ -10,8 +10,16 @@ from src.aoc_2015.day_04.aoc_2015_04_solution import (  # noqa: F401
 @pytest.mark.parametrize(
     argnames=["secret_key", "input", "expected"],
     argvalues=[
-        pytest.param("abcdef", 609043, "000001dbbfa3a5c83a2d506429c7b00e"),
-        pytest.param("pqrstuv", 1048970, "000006136ef2ff3b291c85725f17325c"),
+        pytest.param(
+            "abcdef",
+            609043,
+            "000001dbbfa3a5c83a2d506429c7b00e",  # pragma: allowlist secret
+        ),
+        pytest.param(
+            "pqrstuv",
+            1048970,
+            "000006136ef2ff3b291c85725f17325c",  # pragma: allowlist secret
+        ),
     ],
 )
 def test_get_md5_hash(secret_key, input, expected):
