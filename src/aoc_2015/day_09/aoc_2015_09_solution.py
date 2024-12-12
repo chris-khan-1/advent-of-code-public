@@ -49,7 +49,7 @@ if __name__ == "__main__":
 
     sys.path.append(str(Path(__file__).resolve().parent.parent.parent.parent))
 
-    import helpers
+    import helpers  # noqa: E402
 
     input_path = "./src/aoc_2015/day_09/input.txt"
     result_path = "./src/aoc_2015/day_09/result.txt"

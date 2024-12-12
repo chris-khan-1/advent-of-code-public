@@ -35,7 +35,7 @@ for year in [2024]:
 
                 sys.path.append(str(Path(__file__).resolve().parent.parent.parent.parent))
 
-                import helpers
+                import helpers  # noqa: E402
 
                 input_path = "./src/aoc_{year}/day_{day:02d}/input.txt"
                 result_path = "./src/aoc_{year}/day_{day:02d}/result.txt"
